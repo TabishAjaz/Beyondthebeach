@@ -1,0 +1,162 @@
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+
+    .page-wrapper {
+        .type3{
+            .header-main {
+                .header-left {
+                    // order: 2;
+                   
+                    padding-top: 0 !important;
+                    padding-bottom: 0;
+                }
+                .header-center{
+                    .logo{
+                        img{
+                            min-width: 180px;
+                        }
+                    }
+                }
+                .header-right{
+                    flex: inherit;
+                }
+
+
+            }
+        }
+        .sticky-header{
+            .header-center{
+                margin-left: -1rem;
+            }
+        }
+
+    }
+}
+
+//COMMON CSS
+& when (@media-common =true) {
+
+    .page-wrapper {
+        .type4 {
+            .header-main {
+                background: #ffffff !important;
+                position: inherit !important;
+
+                .header-left {
+                    // order: 2;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+
+                .header-center {
+                    padding-left: 0;
+                }
+
+                .header-right {
+
+                    // order: 3;
+                    .block-search {
+                        #search_mini_form {
+                            .search-category {
+                                &:after {
+                                    margin-left: -1rem;
+                                }
+
+                                #mpsearch-category {
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    padding-left: 5px;
+                                }
+                            }
+
+                            #search {
+                                width: 55%;
+                                display: block;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .type4.sticky-header {
+            position: fixed !important;
+        }
+
+        .porto-block-html-top {
+            .container {
+                a {
+                    background-color: #151719 !important;
+                    border: #151719;
+                }
+            }
+        }
+
+
+    }
+
+    .page-wrapper {
+        .header-main {
+            .header-main {
+                .header-right {
+                    .header-links {
+                        .show {
+                            .primary {
+                                .action {
+                                    background-color: black;
+                                    border: black;
+
+                                    &:hover {
+                                        background-color: #44a28b;
+                                        border: #44a28b;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .breadcrumbs {
+            .items {
+                .product {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    strong {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//MOBILE
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .cms-index-index {
+        .page-wrapper {
+            .type4 {
+                .header-main {
+                    .header-left {}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .header-right {
+        #switcher-currency {
+            //hiding currency swicther as we already have in menu
+            display: none;
+        }
+    }
+}
